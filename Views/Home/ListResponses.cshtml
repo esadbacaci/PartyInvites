@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PartyInvites.Models.GuestResponse>
+
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/site.css" />
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/font-awesome.min.css" />
+
+
+<div class="text-center p-2">
+    <h2>Projeye katılan diğer kişilerin listesi</h2>
+    <table class="table table-bordered table-striped table-sm">
+        <thead>
+            <tr><th>Ad Soyad</th><th>E-mail</th><th>Telefon</th></tr>
+        </thead>
+        <tbody>
+            @foreach (PartyInvites.Models.GuestResponse r in Model)
+            {
+<tr>
+    <td>@r.Name</td>
+    <td>@r.Email</td>
+    <td>@r.Phone</td>
+</tr>
+}
+        </tbody>
+    </table>
+</div>

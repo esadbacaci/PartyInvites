@@ -1,0 +1,29 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+
+
+</head>
+<body class="text-center" style="font-family:'Century Gothic'">
+
+    <div>
+        <h1>Teşekkürler, @Model.Name!</h1>
+        @if (Model.WillAttend == true)
+        {
+@:Bizimle çalışmak istediğiniz için sevinçliyiz!
+}
+else
+{
+@:Birdahaki projemizde görüşmek üzere.
+}
+       Ekibimize katılanları görmek isterseniz<a asp-action="ListResponses"> buradan </a>ulaşabilirsiniz</div>
+</body>
+</html>

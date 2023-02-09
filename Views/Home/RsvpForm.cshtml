@@ -1,0 +1,38 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/site.css" />
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/font-awesome.min.css" />
+
+
+
+<h5 class="bg-primary text-white text-center m-2 p-2">Formu Doldurunuz</h5>
+<form asp-action="RsvpForm" method="post" class="m-2">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="Name">Ad Soyad:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">E-mail:</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone">Telefon No:</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Katılacak mısınız ?</label>
+        <select asp-for="WillAttend" class="form-control">
+            <option value="">Choose an option</option>
+            <option value="true">Evet,Katılacağım</option>
+            <option value="false">Hayır,Katılamayacağım</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>
+<br /><br /><br />
