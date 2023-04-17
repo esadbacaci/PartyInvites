@@ -1,2 +1,2 @@
 # PartyInvites
-Davet Formu ve Kayıtları İçeren Proje
+send a party request and see other reqs
